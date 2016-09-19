@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2> This is my Content Test </h2>
-<p>This is where the blog text shoould appear.</p>
+ 
+	{% for blog in blogs %}
+		<div class="post-title"><a href="/blog/{{blog.key().id()}}">{{blog.title}}</a></div>
+		<div class="content">{{blog.body}}</div>
+		<br>
+	{% endfor %}
+
 
 {% endblock content %}
