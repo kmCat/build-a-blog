@@ -2,17 +2,19 @@
 
 {% block content %}
 
+<div class="form">
 <form method="post">
 	<div class="error">{{error}}</div>
 	<label>title
 		<input type="text" name="title" value="{{title}}">
 	</label>
-	<br>
-	<label>body
+	<br><br>
+	<label>
 		<textarea name="body" value="{{body}}"></textarea>
 	</label>
-
+	<br>
 	<input type="submit">
+</div>
 </form>
 
 {% endblock content %}
